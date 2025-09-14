@@ -1,5 +1,4 @@
 name: variables and secrets
-
 env:
   WF_VAR: "WorkFlow level variable"
 
@@ -41,7 +40,6 @@ jobs:
         if: ${{ startsWith(env.aString, 'this') && always() }}
         run: |
           echo "Running function and always status check"
-         
 
       - name: test cancel status check
         if: ${{ cancelled() }}
